@@ -30,10 +30,10 @@ It contains the simple standard project structure:
 	|    |----contain External Libraries (see documentation of the libraries etc)
 	|         
 	|----/build
-	|    |----contains all the binaries related to the project (call cmake .. and make here to make this the bin dir, )	
+	|    |----contains all the binaries related to the project (call cmake .. and make here to make this the bin dir. Add [Bb][Uu][Ii][Ll][Dd] to .gitignore to ignore this dir completely )	
 	|
 	|     
 	
 	
 	
-Add [Bb][Uu][Ii][Ll][Dd] to .gitignore to ignore this dir completely
+
