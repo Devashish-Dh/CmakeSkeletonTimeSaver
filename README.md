@@ -1,39 +1,23 @@
-# CmakeSkeletonTimeSaver
-C++ project's skeleton template for whenever I need to set one up quickly.
+# CMake skeleton (time saver)
 
-It contains the simple standard project structure:
+Copy-this layout for a new C++ project: root `CMakeLists.txt`, `src/`, `include/`, optional `docs/` and `libs/`, and a `build/` directory that stays local.
 
-	Project_name(root dir)
-	|----README.md etc whatever
-	|----CMakeLists.txt(root level)
-	|
-	|----/docs
-	|    |----Documentation		
-	|
-	|----/src
-	|    |----contains all .cpp files and moduels 	
-	|    |
-	|    |----/module1
-	|    |     |----m1a.cpp
-	|    |     |----m1b.cpp etc
-	|    |     |
-	|    |
-	|    |----/module2
-	|    |     |----m2a.cpp
-	|    |     |----m2b.cpp etc
-	|    |     |
-	| 
-	|----/include
-	|    |----contains all .h and .hpp files and header only libs etc
-	|    
-	|----/libs    
-	|    |----contain External Libraries (see documentation of the libraries etc)
-	|         
-	|----/build
-	|    |----contains all the binaries related to the project (call cmake .. and make here to make this the bin dir. Add [Bb][Uu][Ii][Ll][Dd] to .gitignore to ignore this dir completely )	
-	|
-	|     
-	
-	
-	
+```
+<project>/
+  CMakeLists.txt
+  README.md
+  docs/          documentation
+  src/           .cpp modules
+  include/       headers
+  libs/          third-party (if any)
+  build/         cmake output (gitignored)
+```
 
+Configure from `build/`:
+
+```bash
+cmake -S . -B build
+cmake --build build
+```
+
+Add `[Bb][Uu][Ii][Ll][Dd]` to `.gitignore` so binaries never get committed.
